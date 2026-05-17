@@ -112,6 +112,22 @@ async def unassign(ctx):
         await ctx.send("❌ You don't currently have a character assigned.")
 
 @bot.command()
+async def force_assign(ctx, member: discord.Member, *, char_name: str):
+    """(GM only) Assign a character to a specific user."""
+    if not ctx.author.guild_permissions.administrator:
+        await ctx.send("❌ You must be an Administrator to use this command.")
+        return
+
+    path, data = get_character_file(char_name)
+    if not data:
+        await ctx.send(f"❌ Could not find a character named '{char_name}' in the latest directory.")
+        return
+    
+    user_assignments[str(member.id)] = data["character"]["name"]
+    save_json(ASSIGNMENTS_FILE, user_assignments)
+    await ctx.send(f"✅ Successfully assigned **{data['character']['name']}** to {member.mention}!")
+
+@bot.command()
 async def mystats(ctx):
     """View your assigned character's stats."""
     path, data = get_assigned_character(ctx.author.id)
