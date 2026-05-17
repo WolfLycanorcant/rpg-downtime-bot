@@ -1,0 +1,192 @@
+{
+  "_appVersion": "0.4.8",
+  "_exportType": "character",
+  "exportedAt": "2026-05-14T20:14:30.155Z",
+  "character": {
+    "id": "mp0if9si_2gsm2",
+    "name": "Milly Jackson",
+    "ownerId": "taiplaysapoc",
+    "ownerUsername": "Taiplaysapoc",
+    "ownerIds": [
+      "taiplaysapoc"
+    ],
+    "ownerUsernames": [
+      "Taiplaysapoc"
+    ],
+    "status": "active",
+    "background": "Scavenger",
+    "bodyType": "Skinny",
+    "level": 3,
+    "careerChoice": "Dumpster Diver",
+    "alignment": "Lawful Neutral",
+    "age": "",
+    "gender": "",
+    "bloodType": "O-",
+    "speed": 20,
+    "portrait": null,
+    "stats": {
+      "str": 10,
+      "dex": 20,
+      "con": 16,
+      "int": 16,
+      "wis": 16,
+      "cha": 16
+    },
+    "hp": 27,
+    "maxHp": 27,
+    "blood": 11,
+    "maxBlood": 11,
+    "insanity": 0,
+    "exhaustion": 0,
+    "profBonus": 2,
+    "skills": {
+      "Investigation": true,
+      "Perception": true,
+      "Stealth": true,
+      "Crafting": true
+    },
+    "hobbies": [
+      "Archery"
+    ],
+    "weaponProfs": [
+      "Improvised Weapons",
+      "Makeshift Weapons",
+      "Bows",
+      "Crossbows"
+    ],
+    "weapons": [
+      {
+        "name": "Pocket knife",
+        "icon": "🔪",
+        "damage": "1d4+5",
+        "damageType": "Slashing",
+        "range": "Melee",
+        "properties": "Thrown, Finesse, Light",
+        "ammo": 0,
+        "capacity": 0,
+        "reserve": 0,
+        "attachments": "",
+        "atkBonus": "+7"
+      },
+      {
+        "name": "Compound bow",
+        "icon": "🏹",
+        "damage": "1d10+5",
+        "damageType": "Piercing",
+        "range": "50/80",
+        "properties": "",
+        "ammo": 1,
+        "capacity": 1,
+        "reserve": 10,
+        "attachments": "",
+        "atkBonus": "+7"
+      }
+    ],
+    "clothing": {
+      "head": "",
+      "face": "",
+      "chest": "Hooded sweatshirt",
+      "legs": "Cargo pants",
+      "hands": "",
+      "back": "Hobo bag",
+      "belt": "",
+      "feet": "Running shoes",
+      "holster1": "Arrow quiver",
+      "holster2": ""
+    },
+    "stowedWeapons": {
+      "back": null,
+      "holster1": null,
+      "holster2": null
+    },
+    "clothingAC": {
+      "chest": 1,
+      "legs": 2,
+      "feet": 2,
+      "back": 0,
+      "holster1": 1
+    },
+    "baseAC": 5,
+    "inventory": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "activeEffects": [],
+    "timedEffects": [],
+    "amputations": [],
+    "trackedFeatures": {
+      "1_1st Hobby & Hobby Equipment": true,
+      "2_Hit Point Increase": true,
+      "3_Background Ability": true,
+      "3_ASI": true,
+      "3_ASI_choices": {
+        "str": 0,
+        "dex": 0,
+        "con": 0,
+        "int": 2,
+        "wis": 0,
+        "cha": 0
+      }
+    },
+    "specialAbilities": [
+      {
+        "name": "Career Choice: Dumpster Diver",
+        "desc": "Advantage on Investigation checks for loot or supplies. This can also apply to Perception checks to spot hidden loot in trash piles, containers, or abandoned structures.",
+        "recharge": "Passive",
+        "_bgCareerSource": true
+      },
+      {
+        "name": "Scrounger",
+        "desc": "You have advantage on Investigation checks made to search for loot or supplies. This advantage can also apply to Perception checks used to spot hidden loot in trash piles, containers, wrecked vehicles, or abandoned structures.",
+        "recharge": "Passive"
+      }
+    ],
+    "xp": 900,
+    "rations": 3,
+    "maxRations": 7,
+    "water": 0,
+    "maxWater": 14,
+    "tp": 0,
+    "notes": "[SCAVENGER REFERENCE]\nQuick Build: Wisdom and Charisma highest, followed by Dexterity.\nCareer Choice: Dumpster Diver.\nBarter Economy: 1 ration = 1 RU, 1 ammo = 2 RU, 1 fuel = 5 RU.\nASI Levels: 3, 6, 9, 12, 15, 18.\nCareer Progression: Lv 3: Scrounger | Lv 8: Useful Junk | Lv 11: Nothing Wasted | Lv 17: Hidden Cache | Lv 20: Treasure in Trash\n",
+    "_prevBodyType": "Skinny",
+    "_bgCareerConBonus": 0,
+    "_bgApplied": true,
+    "_bgCareerAbilityName": "Career Choice: Dumpster Diver",
+    "subtitle": "Streetwise survivor built for motion, scavenging, and barter-driven survival.",
+    "_bgVehicle": null,
+    "skillBonus": {},
+    "vehicleIds": []
+  }
+}

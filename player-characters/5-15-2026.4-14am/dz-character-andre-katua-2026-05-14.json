@@ -1,0 +1,204 @@
+{
+  "_appVersion": "0.4.8",
+  "_exportType": "character",
+  "exportedAt": "2026-05-14T20:14:36.208Z",
+  "character": {
+    "id": "mp0ikrmq_3yb7a",
+    "name": "Andre Katua",
+    "status": "active",
+    "background": "Student",
+    "bodyType": "Skinny",
+    "level": 3,
+    "careerChoice": "Intern",
+    "alignment": "Chaotic Good",
+    "age": "",
+    "gender": "",
+    "bloodType": "Unknown",
+    "speed": 20,
+    "portrait": null,
+    "stats": {
+      "str": 11,
+      "dex": 20,
+      "con": 18,
+      "int": 16,
+      "wis": 10,
+      "cha": 15
+    },
+    "hp": 30,
+    "maxHp": 30,
+    "blood": 12,
+    "maxBlood": 12,
+    "insanity": 0,
+    "exhaustion": 0,
+    "profBonus": 2,
+    "skills": {
+      "Crafting": true,
+      "Persuasion": true,
+      "Investigation": true,
+      "Acrobatics": true,
+      "Athletics": true,
+      "Perception": false
+    },
+    "hobbies": [
+      "Parkour"
+    ],
+    "weaponProfs": [
+      "Improvised Weapons",
+      "Makeshift Weapons",
+      "Bows",
+      "Sports Equipment"
+    ],
+    "weapons": [
+      {
+        "name": "Baton",
+        "icon": "🔨",
+        "damage": "1d4+0",
+        "damageType": "Blunt",
+        "range": "Melee",
+        "properties": "Light",
+        "ammo": 0,
+        "capacity": 0,
+        "reserve": 0,
+        "attachments": "",
+        "atkBonus": "+2"
+      }
+    ],
+    "clothing": {
+      "head": "Bandana",
+      "face": "",
+      "chest": "Hooded sweatshirt",
+      "legs": "Gym shorts",
+      "hands": "",
+      "back": "Sling bag",
+      "belt": "",
+      "feet": "Running shoes",
+      "holster1": "",
+      "holster2": ""
+    },
+    "clothingAC": {
+      "chest": 1,
+      "legs": 0,
+      "feet": 2,
+      "back": 1,
+      "head": 1
+    },
+    "baseAC": 5,
+    "inventory": [
+      null,
+      null,
+      null,
+      null,
+      {
+        "name": "Coffee mug",
+        "qty": 1,
+        "icon": "☕",
+        "tp": 0
+      },
+      null,
+      null,
+      {
+        "name": "T-shirt",
+        "qty": 1,
+        "icon": "👕",
+        "tp": 0,
+        "category": "clothing",
+        "startingItem": true
+      },
+      {
+        "name": "High-top sneakers",
+        "qty": 1,
+        "icon": "👟",
+        "tp": 0,
+        "category": "clothing",
+        "startingItem": true
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "activeEffects": [],
+    "timedEffects": [],
+    "amputations": [],
+    "trackedFeatures": {
+      "1_1st Hobby & Hobby Equipment": true,
+      "2_Hit Point Increase": true,
+      "3_Background Ability": true,
+      "3_ASI": true,
+      "3_ASI_choices": {
+        "str": 0,
+        "dex": 0,
+        "con": 1,
+        "int": 1,
+        "wis": 0,
+        "cha": 0
+      }
+    },
+    "specialAbilities": [
+      {
+        "name": "Algebra",
+        "desc": "Any checks to recall information or answer a question you would know succeeds immediately without a roll.",
+        "recharge": "Passive"
+      }
+    ],
+    "xp": 900,
+    "rations": 4,
+    "maxRations": 7,
+    "water": 1,
+    "maxWater": 14,
+    "tp": 0,
+    "notes": "\"109 in the sky but the pigs won't quit, you're here with me, Dr. Death Defying.\"\n\n\"A system failure for the masses, antimatter for the master plan. Louder than God's revolver and twice as shiny.\" \n\n\"The future is bulletproof. The aftermath is secondary.\" ",
+    "_prevBodyType": "Skinny",
+    "_bgCareerConBonus": 0,
+    "_bgApplied": true,
+    "_bgVehicle": null,
+    "vehicleIds": [],
+    "ownerIds": [
+      "penguinlord"
+    ],
+    "ownerUsernames": [
+      "penguinlord"
+    ],
+    "skillBonus": {},
+    "stowedWeapons": {
+      "back": null,
+      "holster1": null,
+      "holster2": {
+        "name": "Pocket knife",
+        "icon": "🔪",
+        "damage": "1d4+5",
+        "damageType": "Slashing",
+        "range": "Melee",
+        "properties": "Thrown, Finesse, Light",
+        "ammo": 0,
+        "capacity": 0,
+        "reserve": 0,
+        "attachments": "",
+        "atkBonus": "+7"
+      }
+    },
+    "ownerId": "penguinlord",
+    "ownerUsername": "penguinlord"
+  }
+}

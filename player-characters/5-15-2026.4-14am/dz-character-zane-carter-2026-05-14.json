@@ -1,0 +1,189 @@
+{
+  "_appVersion": "0.4.8",
+  "_exportType": "character",
+  "exportedAt": "2026-05-14T20:14:16.997Z",
+  "character": {
+    "id": "mopfmvob_1dhw8",
+    "name": "Zane Carter",
+    "status": "active",
+    "background": "Mechanic",
+    "bodyType": "Fit",
+    "level": 3,
+    "careerChoice": "Car Mechanic",
+    "alignment": "True Neutral",
+    "age": "",
+    "gender": "",
+    "bloodType": "AB-",
+    "speed": 30,
+    "portrait": "data:image/jpeg;base64,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",
+    "stats": {
+      "str": 11,
+      "dex": 13,
+      "con": 10,
+      "int": 18,
+      "wis": 15,
+      "cha": 15
+    },
+    "hp": 26,
+    "maxHp": 26,
+    "blood": 10,
+    "maxBlood": 10,
+    "insanity": 0,
+    "exhaustion": 0,
+    "profBonus": 2,
+    "skills": {
+      "Technology": true,
+      "Tinkering": true,
+      "History": true,
+      "Investigation": true,
+      "Animal Handling": true,
+      "Acrobatics": true,
+      "Nature": true
+    },
+    "hobbies": [
+      "Horseback Riding"
+    ],
+    "weaponProfs": [
+      "Improvised Weapons",
+      "Vehicle Repair Tools"
+    ],
+    "weapons": [
+      {
+        "name": "Pipe wrench",
+        "icon": "🔧",
+        "damage": "1d4+0",
+        "damageType": "Blunt",
+        "range": "Melee",
+        "properties": "Light",
+        "ammo": 0,
+        "capacity": 0,
+        "reserve": 0,
+        "attachments": "",
+        "atkBonus": "+2"
+      }
+    ],
+    "clothing": {
+      "head": "",
+      "face": "",
+      "chest": "T-shirt",
+      "legs": "Cargo pants",
+      "hands": "",
+      "back": "",
+      "belt": "",
+      "feet": "Work boots",
+      "holster1": "",
+      "holster2": ""
+    },
+    "clothingAC": {
+      "chest": 0,
+      "legs": 0,
+      "feet": 2
+    },
+    "baseAC": 5,
+    "inventory": [
+      {
+        "name": "Toolbox with mechanic tools",
+        "qty": 1,
+        "icon": "🧰",
+        "tp": 0
+      },
+      {
+        "name": "Running shoes",
+        "qty": 1,
+        "icon": "👟",
+        "tp": 0,
+        "category": "clothing",
+        "startingItem": true
+      },
+      {
+        "name": "Sedan key",
+        "qty": 1,
+        "icon": "🚗",
+        "tp": 0
+      },
+      {
+        "name": "Horse with tack",
+        "qty": 1,
+        "icon": "",
+        "tp": 0
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "activeEffects": [],
+    "timedEffects": [],
+    "amputations": [],
+    "trackedFeatures": {
+      "1_1st Hobby & Hobby Equipment": true,
+      "3_Background Ability": true,
+      "3_ASI": true,
+      "3_ASI_choices": {
+        "str": 0,
+        "dex": 0,
+        "con": 2,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "2_Hit Point Increase": true
+    },
+    "specialAbilities": [
+      {
+        "name": "Fixit Felix",
+        "desc": "Repairing broken machines takes half the time. Add your Tinkering modifier to Investigation checks when searching for machine components.",
+        "recharge": "Passive"
+      }
+    ],
+    "xp": 900,
+    "rations": 0,
+    "maxRations": 21,
+    "water": 0,
+    "maxWater": 14,
+    "tp": 0,
+    "notes": "",
+    "_prevBodyType": "Fit",
+    "_bgCareerConBonus": 0,
+    "_bgApplied": true,
+    "_bgVehicle": "Sedan",
+    "vehicleIds": [
+      "v17777924015887ll8"
+    ],
+    "ownerIds": [
+      "zane carter"
+    ],
+    "ownerUsernames": [
+      "Zane carter"
+    ],
+    "ownerId": "zane carter",
+    "ownerUsername": "Zane carter",
+    "_isFromParty": true
+  }
+}

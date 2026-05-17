@@ -1,0 +1,206 @@
+{
+  "_appVersion": "0.4.8",
+  "_exportType": "character",
+  "exportedAt": "2026-05-14T20:14:41.200Z",
+  "character": {
+    "id": "mp0ip4w7_1d7em",
+    "name": "Neighga ",
+    "status": "active",
+    "background": "Police Officer",
+    "bodyType": "Fit",
+    "level": 3,
+    "careerChoice": "School Liaison Officer",
+    "alignment": "Neutral Good",
+    "age": "",
+    "gender": "",
+    "bloodType": "O-",
+    "speed": 30,
+    "portrait": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiwgIRokNC43NjMuMjI6QVNGOj1OPjIySGJJTlZYXV5dOEVmbWVabFNbXVn/2wBDAQ8QEBYTFioXFypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVn/wAARCAB4AHgDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAECAwQG/8QALBAAAgICAgEDBAEDBQAAAAAAAAECEQMhEjFBE1FhBCIycUJSkbEUgaHR4f/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8A8P8ATwhlbhKXGT/F+LIyY5Y5OMlTITo7ITX1UI45Usq/GX9XwZHLF10O2+2OcXCTjJNNCQDWi4tiWy+LtAV/kTtmkYpW30glGSxrJ6cvTf8AIg58i8GTizq1KKktozlEoxWiW9lyVdmYDQpD/wBybsBoBIANaQlpjbJ8gdkH/qqjNr1V0/6v/TKeNwk0+zJWjrjm9eo5WlKqU/8AsDKKNFHqwjjfnTXgMuSOKD3vwiCPq5NY0k6tmPqZHj4udpb42Rmy8uK9t2XeLjCtNxqck78+2vBQYczj9vcXs05uU6jFteTkVKetqzuwZlJemuMOTX3V1+hRhNWQ0XmUY5XxbnT2yG7Ahh4DyNIoUVsC0qAgprbYhvTZNgVdFQ2yO0XFUB0804RUmk1/I5fqo5IyuXXa/RP1Ddx9hx+qaxrFP7sT8eV+gOe7QldHTm+nWOPLHJTj7p6Zyoou0qpbQKbT0/2KLF1LQG88mSeNR/GC8Ch+CscK4vlf7rSJi6lpdkDaBdbHKiUmBaAI97ACpxdszrZ0NK2ZSWwGlZaREHs1SAFFS06ZPoQW6saXyOc1CFtMgmU44oVSa9jmnCMlzx/29hZJSm7evghPi7XZoHTocIuclEtSjJU0rZb44sbcabYDyTUI8F4M8UXd+DK7ds3xS8AOaEkXWyemQUgBLYAaStSZn3I0n+JEG+QDTo0U7I472V5AbkoqzObcvunpLwZZMv3a8EyyOS2MBk309GTHYigC7AAh17FxdNP2IGn8AdF8laFWycc/4s1ekRU9PYCu+wA3kk00zKuLHLI1O/khyt2Bv/HZGRpY2/ihKehZ5L0uvIHLYfAVb0b+j9qp78lGFCo6MmLjBbsz4NxAgF2UoPteBSQCWgYfI2wg+TaM7jT7MF2bqNK/IU09pAJdgQEncmJf3G6tsaXyAktkzfj2NHKlrbMZsDTBHybJ7ZlCcVBJg8ivXQGj2q7ElxuumR6uifVfsBr/AIM3C214J9Rh6gBOKq0NwTWxc9dA532Bm1xZtF3Fe5nOSa+Qj7oC+mAlsALdWC/5AAD03umT6O7uwABrEvcaxxXYAAnjt0lSKWOKW3sAIpPGvFkygkwAqFw9hcfgAAOHwHGugAAqmAAB/9k=",
+    "stats": {
+      "str": 20,
+      "dex": 19,
+      "con": 20,
+      "int": 14,
+      "wis": 15,
+      "cha": 13
+    },
+    "hp": 33,
+    "maxHp": 33,
+    "blood": 15,
+    "maxBlood": 15,
+    "insanity": 0,
+    "exhaustion": 0,
+    "profBonus": 2,
+    "skills": {
+      "Firearms": true,
+      "Melee Weapons": 1,
+      "Acrobatics": true,
+      "Athletics": true,
+      "History": 0
+    },
+    "hobbies": [
+      "Parkour",
+      "Sword Fighting"
+    ],
+    "weaponProfs": [
+      "Light Firearms",
+      "Rifles",
+      "Shotguns",
+      "Blades"
+    ],
+    "weapons": [
+      {
+        "name": "Katana",
+        "icon": "🗡️",
+        "damage": "1d12+7",
+        "damageType": "Slashing",
+        "range": "Melee",
+        "properties": "Finesse",
+        "ammo": 0,
+        "capacity": 0,
+        "reserve": 0,
+        "attachments": "",
+        "atkBonus": "+7"
+      },
+      {
+        "name": "9mm Pistol",
+        "damage": "1d10+6",
+        "range": "40/60",
+        "atkBonus": "+6",
+        "properties": "semiauto",
+        "damageType": "Piercing",
+        "ammo": 15,
+        "capacity": 15,
+        "reserve": 0,
+        "attachments": ""
+      }
+    ],
+    "clothing": {
+      "head": "",
+      "face": "",
+      "chest": "Button-up shirt",
+      "legs": "Cargo pants",
+      "hands": "",
+      "back": "",
+      "belt": "",
+      "feet": "Running shoes",
+      "holster1": "",
+      "holster2": ""
+    },
+    "clothingAC": {
+      "chest": 0,
+      "legs": 0,
+      "feet": 0,
+      "back": 0
+    },
+    "baseAC": 5,
+    "inventory": [
+      {
+        "name": "9mm handgun with one magazine & 15 rounds",
+        "qty": 1,
+        "icon": "🔫",
+        "tp": 0
+      },
+      {
+        "name": "Radio transmitter",
+        "qty": 1,
+        "icon": "📻",
+        "tp": 0
+      },
+      {
+        "name": "Set of handcuffs and pepper spray",
+        "qty": 1,
+        "icon": "🧴",
+        "tp": 0
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "activeEffects": [],
+    "timedEffects": [],
+    "amputations": [],
+    "trackedFeatures": {
+      "1_1st Hobby & Hobby Equipment": true,
+      "4_2nd Hobby": true,
+      "2_Hit Point Increase": true,
+      "3_ASI": true,
+      "3_ASI_choices": {
+        "str": 1,
+        "dex": 0,
+        "con": 1,
+        "int": 0,
+        "wis": 0,
+        "cha": 0
+      },
+      "3_Background Ability": true
+    },
+    "specialAbilities": [
+      {
+        "name": "School Liaison Officer",
+        "desc": "Prior to the apocalypse you were responsible for\nkeeping the local high schools safe.\nAt level 1 you have advantage on attack rolls in\ngovernment buildings. You also start with the\nfollowing items:\n● a set of handcuffs and pepper spray.",
+        "recharge": "Passive"
+      },
+      {
+        "name": "Crowd Control",
+        "desc": "You are adept in dealing\nwith enemies in large numbers. Gain a bonus to\nyour attack rolls equal to your Wisdom modifier on\na creature within 10 feet of 3 or more creatures.",
+        "recharge": "Passive"
+      }
+    ],
+    "xp": 900,
+    "rations": 3,
+    "maxRations": 21,
+    "water": 0,
+    "maxWater": 14,
+    "tp": 0,
+    "notes": "",
+    "_prevBodyType": "Fit",
+    "_bgCareerConBonus": 0,
+    "_bgApplied": true,
+    "_bgVehicle": null,
+    "vehicleIds": [],
+    "ownerId": "nikka",
+    "ownerUsername": "nikka",
+    "_isFromParty": true,
+    "ownerIds": [
+      "nikka"
+    ],
+    "ownerUsernames": [
+      "nikka"
+    ],
+    "skillBonus": {},
+    "stowedWeapons": {
+      "back": null,
+      "holster1": null,
+      "holster2": null
+    }
+  }
+}
