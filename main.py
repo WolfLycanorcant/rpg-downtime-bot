@@ -183,6 +183,26 @@ async def upload_char(ctx):
             await ctx.send(f"⚠️ Ignored `{attachment.filename}` (not a JSON file).")
 
 @bot.command()
+async def download_char(ctx, *, char_name: str = None):
+    """Download a character JSON file (defaults to your assigned character)."""
+    if char_name:
+        path, data = get_character_file(char_name)
+        if not path:
+            await ctx.send(f"❌ Could not find a character named '{char_name}'.")
+            return
+    else:
+        path, data = get_assigned_character(ctx.author.id)
+        if not path:
+            await ctx.send("❌ You don't have an assigned character. Use `!download_char <name>` or `!assign <name>` first.")
+            return
+
+    try:
+        file = discord.File(path)
+        await ctx.send(f"📁 Here is the latest JSON file for **{data['character']['name']}**:", file=file)
+    except Exception as e:
+        await ctx.send(f"❌ Error uploading file: {e}")
+
+@bot.command()
 async def activities(ctx):
     """List all available D&Z survival activities."""
     embed = discord.Embed(
