@@ -101,6 +101,17 @@ async def assign(ctx, *, char_name: str):
     await ctx.send(f"✅ Successfully assigned **{data['character']['name']}** to {ctx.author.mention}!")
 
 @bot.command()
+async def unassign(ctx):
+    """Unassign your current character."""
+    user_id = str(ctx.author.id)
+    if user_id in user_assignments:
+        char_name = user_assignments.pop(user_id)
+        save_json(ASSIGNMENTS_FILE, user_assignments)
+        await ctx.send(f"✅ Successfully unassigned **{char_name}**. You are no longer tracking a character.")
+    else:
+        await ctx.send("❌ You don't currently have a character assigned.")
+
+@bot.command()
 async def mystats(ctx):
     """View your assigned character's stats."""
     path, data = get_assigned_character(ctx.author.id)
