@@ -110,16 +110,16 @@ intents.messages = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 DOWNTIME_ACTIVITIES = {
-    "scavenge_safe": {"name": "Safe Scavenging", "icon": "🔦", "desc": "Loot a secured area for Food, Water, and basic Scrap."},
-    "scavenge_urban": {"name": "Urban Scavenging", "icon": "🏙️", "desc": "High-risk search in city ruins for Firearms, Ammo, and Meds."},
-    "fortify": {"name": "Fortifying Base", "icon": "🔨", "desc": "Construct Wood or Metal barricades. Requires Scrap."},
-    "traps": {"name": "Setting Traps", "icon": "🕳️", "desc": "Dig Pitfalls or set Snares for defense and small game."},
-    "farming": {"name": "Farming/Tending", "icon": "🌽", "desc": "Maintain crops for a major harvest. Yields 4d20 rations."},
-    "taming": {"name": "Animal Taming", "icon": "🐕", "desc": "Befriend a stray dog, cat, or coyote."},
-    "crafting": {"name": "Makeshift Crafting", "icon": "🛠️", "desc": "Create Spiked Bats, Molotovs, or Suppressors."},
-    "vehicle": {"name": "Vehicle Repair", "icon": "🚗", "desc": "Fix Engines, Tires, or Bodywork using Scrap."},
-    "recovery": {"name": "Medical Recovery", "icon": "🩹", "desc": "Heal from Infection, Blood Loss, or Amputation surgery."},
-    "sanity": {"name": "Sanity Care", "icon": "🚬", "desc": "Lower Insanity Levels through rest or nice meals."}
+    "scavenge_safe": {"name": "Safe Scavenging", "icon": "🔦", "cmd": "`!scavenge`", "desc": "Loot a secured area for Food, Water, and basic Scrap."},
+    "scavenge_urban": {"name": "Urban Scavenging", "icon": "🏙️", "cmd": "`!scavenge urban`", "desc": "High-risk search in city ruins for Firearms, Ammo, and Meds."},
+    "fortify": {"name": "Fortifying Base", "icon": "🔨", "cmd": "`!fortify`", "desc": "Construct Wood or Metal barricades. Requires Scrap."},
+    "traps": {"name": "Setting Traps", "icon": "🕳️", "cmd": "`!activity traps`", "desc": "Dig Pitfalls or set Snares for defense and small game."},
+    "farming": {"name": "Farming/Tending", "icon": "🌽", "cmd": "`!activity farming`", "desc": "Maintain crops for a major harvest. Yields 4d20 rations."},
+    "taming": {"name": "Animal Taming", "icon": "🐕", "cmd": "`!activity taming`", "desc": "Befriend a stray dog, cat, or coyote."},
+    "crafting": {"name": "Makeshift Crafting", "icon": "🛠️", "cmd": "`!activity crafting`", "desc": "Create Spiked Bats, Molotovs, or Suppressors."},
+    "vehicle": {"name": "Vehicle Repair", "icon": "🚗", "cmd": "`!activity vehicle`", "desc": "Fix Engines, Tires, or Bodywork using Scrap."},
+    "recovery": {"name": "Medical Recovery", "icon": "🩹", "cmd": "`!recovery`", "desc": "Heal from Infection, Blood Loss, or Amputation surgery."},
+    "sanity": {"name": "Sanity Care", "icon": "🚬", "cmd": "`!sanity`", "desc": "Lower Insanity Levels through rest or nice meals."}
 }
 
 @bot.event
@@ -276,7 +276,7 @@ async def activities(ctx):
         color=0xf39c12 # Amber color
     )
     for key, act in DOWNTIME_ACTIVITIES.items():
-        embed.add_field(name=f"{act['icon']} {act['name']}", value=act['desc'], inline=False)
+        embed.add_field(name=f"{act['icon']} {act['name']} - {act.get('cmd', '')}", value=act['desc'], inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
