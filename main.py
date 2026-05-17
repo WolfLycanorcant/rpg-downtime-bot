@@ -52,7 +52,7 @@ def get_character_file(char_name):
             path = os.path.join(latest_folder, file)
             data = load_json(path, None)
             if data and "character" in data and "name" in data["character"]:
-                if data["character"]["name"].lower() == char_name.lower():
+                if data["character"]["name"].strip().lower() == char_name.strip().lower():
                     return path, data
     return None, None
 
