@@ -12,6 +12,7 @@ DATA_DIR = os.getenv("DATA_DIR", ".")
 COOLDOWN_FILE = os.path.join(DATA_DIR, "cooldowns.json")
 ASSIGNMENTS_FILE = os.path.join(DATA_DIR, "character_assignments.json")
 PLAYER_CHARS_DIR = os.path.join(DATA_DIR, "player-characters")
+DISABLED_ACTIVITIES_FILE = os.path.join(DATA_DIR, "disabled_activities.json")
 
 def load_json(filepath, default):
     try:
@@ -26,6 +27,7 @@ def save_json(filepath, data):
 
 user_cooldowns = load_json(COOLDOWN_FILE, {})
 user_assignments = load_json(ASSIGNMENTS_FILE, {})
+disabled_activities = load_json(DISABLED_ACTIVITIES_FILE, [])
 
 def get_latest_folder():
     if not os.path.exists(PLAYER_CHARS_DIR):
@@ -60,6 +62,12 @@ def get_assigned_character(user_id):
     char_name = user_assignments.get(str(user_id))
     if not char_name: return None, None
     return get_character_file(char_name)
+
+async def is_activity_disabled(key, ctx):
+    if key in disabled_activities:
+        await ctx.send(f"❌ **{DOWNTIME_ACTIVITIES[key]['name']}** is currently locked/disabled by the GM.")
+        return True
+    return False
 
 async def check_and_consume_cooldown(ctx):
     """
@@ -122,6 +130,15 @@ DOWNTIME_ACTIVITIES = {
     "sanity": {"name": "Sanity Care", "icon": "🚬", "cmd": "`!sanity`", "desc": "Lower Insanity Levels through rest or nice meals."}
 }
 
+def find_activity_key(search_term):
+    search_term = search_term.lower().strip()
+    # Handle replacing spaces with underscores for direct key match
+    alt_search = search_term.replace(" ", "_")
+    for k, v in DOWNTIME_ACTIVITIES.items():
+        if k == alt_search or v['name'].lower() == search_term:
+            return k
+    return None
+
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user} - D&Z Survival Bot is Active!")
@@ -164,6 +181,44 @@ async def force_assign(ctx, member: discord.Member, *, char_name: str):
     user_assignments[str(member.id)] = data["character"]["name"]
     save_json(ASSIGNMENTS_FILE, user_assignments)
     await ctx.send(f"✅ Successfully assigned **{data['character']['name']}** to {member.mention}!")
+
+@bot.command()
+async def disable(ctx, *, activity_name: str):
+    """(GM only) Disable a specific activity."""
+    if not ctx.author.guild_permissions.administrator:
+        await ctx.send("❌ You must be an Administrator to use this command.")
+        return
+
+    found_key = find_activity_key(activity_name)
+    if not found_key:
+        await ctx.send(f"❌ Could not find activity '{activity_name}'. Type `!activities` to see valid names.")
+        return
+        
+    if found_key in disabled_activities:
+        await ctx.send(f"⚠️ **{DOWNTIME_ACTIVITIES[found_key]['name']}** is already disabled.")
+    else:
+        disabled_activities.append(found_key)
+        save_json(DISABLED_ACTIVITIES_FILE, disabled_activities)
+        await ctx.send(f"🔒 **{DOWNTIME_ACTIVITIES[found_key]['name']}** has been DISABLED.")
+
+@bot.command()
+async def enable(ctx, *, activity_name: str):
+    """(GM only) Enable a specific activity."""
+    if not ctx.author.guild_permissions.administrator:
+        await ctx.send("❌ You must be an Administrator to use this command.")
+        return
+
+    found_key = find_activity_key(activity_name)
+    if not found_key:
+        await ctx.send(f"❌ Could not find activity '{activity_name}'. Type `!activities` to see valid names.")
+        return
+        
+    if found_key in disabled_activities:
+        disabled_activities.remove(found_key)
+        save_json(DISABLED_ACTIVITIES_FILE, disabled_activities)
+        await ctx.send(f"🔓 **{DOWNTIME_ACTIVITIES[found_key]['name']}** has been ENABLED!")
+    else:
+        await ctx.send(f"⚠️ **{DOWNTIME_ACTIVITIES[found_key]['name']}** is already enabled.")
 
 @bot.command()
 async def mystats(ctx):
@@ -276,7 +331,8 @@ async def activities(ctx):
         color=0xf39c12 # Amber color
     )
     for key, act in DOWNTIME_ACTIVITIES.items():
-        embed.add_field(name=f"{act['icon']} {act['name']} - {act.get('cmd', '')}", value=act['desc'], inline=False)
+        status = " 🔒 `[DISABLED]`" if key in disabled_activities else ""
+        embed.add_field(name=f"{act['icon']} {act['name']}{status} - {act.get('cmd', '')}", value=act['desc'], inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -301,10 +357,15 @@ async def rollout(ctx):
 @bot.command()
 async def scavenge(ctx, zone="safe"):
     """Quickly roll for scavenging results (safe or urban) and apply to your character."""
+    zone = zone.lower()
+    if zone == "urban":
+        if await is_activity_disabled("scavenge_urban", ctx): return
+    else:
+        if await is_activity_disabled("scavenge_safe", ctx): return
+
     if not await check_and_consume_cooldown(ctx):
         return
 
-    zone = zone.lower()
     items = []
     danger_roll = 0
     if zone == "urban":
@@ -356,6 +417,8 @@ async def scavenge(ctx, zone="safe"):
 @bot.command()
 async def recovery(ctx):
     """Use Medical Supplies to restore your HP and Blood."""
+    if await is_activity_disabled("recovery", ctx): return
+
     char_path, char_data = get_assigned_character(ctx.author.id)
     if not char_data:
         await ctx.send("❌ You need an assigned character to perform recovery. Use `!assign <name>`.")
@@ -386,6 +449,8 @@ async def recovery(ctx):
 @bot.command()
 async def sanity(ctx):
     """Eat a Ration to lower your Insanity by 1."""
+    if await is_activity_disabled("sanity", ctx): return
+
     char_path, char_data = get_assigned_character(ctx.author.id)
     if not char_data:
         await ctx.send("❌ You need an assigned character to care for your sanity. Use `!assign <name>`.")
@@ -410,6 +475,8 @@ async def sanity(ctx):
 @bot.command()
 async def fortify(ctx):
     """Use Basic Scrap to fortify your base."""
+    if await is_activity_disabled("fortify", ctx): return
+
     char_path, char_data = get_assigned_character(ctx.author.id)
     if not char_data:
         await ctx.send("❌ You need an assigned character to fortify the base. Use `!assign <name>`.")
@@ -437,11 +504,18 @@ async def fortify(ctx):
 @bot.command()
 async def activity(ctx, *, activity_name: str):
     """Generic command for other downtime activities (e.g. !activity taming)."""
+    found_key = find_activity_key(activity_name)
+    if not found_key:
+        await ctx.send(f"❌ Unknown activity '{activity_name}'. Use `!activities` to see valid options.")
+        return
+
+    if await is_activity_disabled(found_key, ctx): return
+
     if not await check_and_consume_cooldown(ctx):
         return
 
     roll = random.randint(1, 20)
-    msg = f"🛠️ **Downtime Activity**: {ctx.author.mention} spent their downtime action working on **{activity_name.title()}**.\n"
+    msg = f"🛠️ **Downtime Activity**: {ctx.author.mention} spent their downtime action working on **{DOWNTIME_ACTIVITIES[found_key]['name']}**.\n"
     msg += f"🎲 **Survival Check**: {roll}"
     if roll == 20: msg += " - **CRITICAL SUCCESS!** 🏆"
     elif roll == 1: msg += " - **CRITICAL FAILURE!** 💀"
