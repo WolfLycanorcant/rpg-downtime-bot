@@ -360,4 +360,41 @@ async def scavenge(ctx, zone="safe"):
         
     await ctx.send(msg + char_update_msg)
 
+@bot.command()
+async def instructions(ctx):
+    """Show instructions for players on how to use the bot."""
+    embed = discord.Embed(
+        title="📚 D&Z Player Instructions",
+        description="Welcome to the wasteland! Here is how to use the survival bot to track your character and downtime.",
+        color=0x3498db
+    )
+    
+    embed.add_field(
+        name="1. Claim Your Character", 
+        value="Type `!assign <Character Name>` to link your Discord account to your character sheet.", 
+        inline=False
+    )
+    
+    embed.add_field(
+        name="2. View Your Stats", 
+        value="Type `!mystats` at any time to check your HP, Blood, Insanity, Rations, Water, and Weapons.", 
+        inline=False
+    )
+    
+    embed.add_field(
+        name="3. Go Scavenging", 
+        value="Type `!scavenge` (safe) or `!scavenge urban` (dangerous). The bot will roll for loot and automatically add it to your inventory! *(Limit: 2 per 24 hours, 8-hour cooldown)*.", 
+        inline=False
+    )
+    
+    embed.add_field(
+        name="4. View Other Activities", 
+        value="Type `!activities` to see the full list of downtime actions (like Base Building, Traps, Medical Recovery) you can do instead of scavenging.", 
+        inline=False
+    )
+
+    embed.set_footer(text="Survival isn't a right, it's a privilege. Good luck out there.")
+    
+    await ctx.send(embed=embed)
+
 bot.run(TOKEN)
