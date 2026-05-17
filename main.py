@@ -6,9 +6,12 @@ import discord
 from discord.ext import commands
 from datetime import datetime
 
-COOLDOWN_FILE = "cooldowns.json"
-ASSIGNMENTS_FILE = "character_assignments.json"
-PLAYER_CHARS_DIR = "player-characters"
+# Allow configuring a data directory via environment variables (vital for Railway volumes)
+DATA_DIR = os.getenv("DATA_DIR", ".")
+
+COOLDOWN_FILE = os.path.join(DATA_DIR, "cooldowns.json")
+ASSIGNMENTS_FILE = os.path.join(DATA_DIR, "character_assignments.json")
+PLAYER_CHARS_DIR = os.path.join(DATA_DIR, "player-characters")
 
 def load_json(filepath, default):
     try:
