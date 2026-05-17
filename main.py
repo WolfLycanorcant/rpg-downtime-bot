@@ -331,8 +331,14 @@ async def activities(ctx):
         color=0xf39c12 # Amber color
     )
     for key, act in DOWNTIME_ACTIVITIES.items():
-        status = " 🔒 `[DISABLED]`" if key in disabled_activities else ""
-        embed.add_field(name=f"{act['icon']} {act['name']}{status} - {act.get('cmd', '')}", value=act['desc'], inline=False)
+        if key in disabled_activities:
+            name_str = f"~~{act['icon']} {act['name']} - {act.get('cmd', '')}~~ 🔒"
+            desc_str = f"~~{act['desc']}~~ *(Currently disabled by GM)*"
+        else:
+            name_str = f"{act['icon']} {act['name']} - {act.get('cmd', '')}"
+            desc_str = act['desc']
+            
+        embed.add_field(name=name_str, value=desc_str, inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
